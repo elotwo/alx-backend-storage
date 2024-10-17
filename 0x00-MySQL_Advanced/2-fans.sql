@@ -1,3 +1,4 @@
+-- A script that ranks country origins of bands, ordered by the number of (non-unique) fans
 CREATE TEMPORARY TABLE ranked_countries AS
 SELECT 
     origin,
@@ -10,10 +11,8 @@ ORDER BY
     nb_fans DESC;
 SELECT 
     origin,
-    nb_fans,
-    @rank := @rank + 1 AS rank
-    (SELECT @rank := 0) r 
+    nb_fans
 FROM 
-    ranked_countries;
+    ranked_countries
 ORDER BY 
     nb_fans DESC;
