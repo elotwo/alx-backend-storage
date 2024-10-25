@@ -1,0 +1,3 @@
+#!/usr/bin/env python3
+// this is about listing everything with a particular value
+db.school.find({ "name": "Holberton school" }).pretty();
