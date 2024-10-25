@@ -1,2 +1,3 @@
-#!/usr/bin/env python3
-use my_db
+#!/usr/bin/env python3 
+# this script about listing all data bases mongo db
+show dbs
